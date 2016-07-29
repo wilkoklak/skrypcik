@@ -10,6 +10,7 @@
 <body>
 	<div id="top_bar">
 		<button ng-click="run()">uruchom</button>
+		<button ng-click="save()">Zapisz</button>
 	</div>
 	<div id="container">
 		<div id="right">
@@ -33,6 +34,7 @@
 			<div id="editor_js" class="editor"></div>
 		</div>
 		<div id="left">
+			<iframe src="{{ iframeSrc }}"></iframe>
 		</div>
 	</div>
 </body>
@@ -49,4 +51,7 @@
 	// 	editor.resize(true);
 	// });
 </script>
+<?php echo "<script>
+var ip = \"".$_SERVER['REMOTE_ADDR']."\";
+</script>"; ?>
 <script src="js/core.js"></script>
