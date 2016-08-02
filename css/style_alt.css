@@ -1,0 +1,99 @@
+
+body {
+	font-family: Arial, sans-serif;
+	background: #161616;
+	color: #f2f2f2;
+}
+
+#top_bar {
+	line-height: 3em;
+	height: 3em;
+	background: #070707;
+	border-bottom: 1px solid #666;
+	padding: 0 15px;
+}
+#top_bar button {
+	width: 50px;
+	font-size: 1.4em;
+	color: #999;
+	transition: 0.5s;
+	border: none;
+	background: transparent;
+	outline: 0;
+}
+#top_bar button:hover {
+	cursor: pointer;
+	color: #ff9900;
+}
+.cbalink {
+	display: none;
+}
+h1, h2, p {
+	margin-bottom: 20px;
+}
+h1, h2 {
+	text-align: center;
+	font-weight: bold;
+}
+h1 {
+	font-size: 2.2em;
+}
+h2 {
+	font-size: 1.5em;
+}
+p {
+	line-height: 1.1em;
+}
+
+.feed {
+	width: inherit;
+	margin-top: 3em;
+}
+.feed th {
+	font-weight: bold;
+	border-bottom: 1px solid #666;
+}
+.feed tr:nth-of-type(2n) {
+	background: #111;
+}
+.feed td:first-child {
+	text-overflow: ellipsis;
+	word-wrap: break-word;
+	word-break: break-all;
+}
+.feed td:last-child {
+	text-align: right;
+}
+.feed th, .feed td {
+	padding: 0.7em;
+}
+a {
+	color: #ff9900;
+	outline: none;
+	text-decoration: none;
+}
+a:hover {
+	color: #ffad33;
+}
+.center {
+	width: 100%;
+	padding: 10px;
+}
+
+@media screen and (min-width: 600px) {
+	.center {
+		width: 540px;
+		margin: auto;
+		padding: 0;
+	}
+}
+@media screen and (min-width: 800px) {
+	.center {
+		width: 720px;
+	}
+}
+@media screen and (min-width: 1200px) {
+	.center {
+		width: 1140px;
+	}
+}

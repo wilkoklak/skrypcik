@@ -138,14 +138,14 @@ app.controller("mainCtrl", function($scope, $http, $window, $timeout) {
 	document.querySelector("#app").style.display = "initial";
 	$scope.tips = [
 		"Kliknij Ctrl+F w danym polu, aby wyszukać",
-		"Wciśnij Ctrl+Shift+D, aby skopiować linijkę",
+		"Wciśnij Ctrl+D, aby skopiować linijkę",
 		"Wciśnij Shift+Tab, aby usunąć jedno wcięcie",
-		"Odwiedź /feed, aby zobaczyć udostępnione skrypciki",
+		"Odwiedź <a href=\"feed/\">feed</a>, aby zobaczyć udostępnione skrypciki",
 		"W menu udostępniania, możesz zmienić ustawienia widoczności na feedzie",
 		"Aplikacja hula na AngularJS+PHP"
 	];
 	$scope.changeTip = function(i) {
-		if(i < $scope.tips.length) {
+		if(i <= $scope.tips.length) {
 			$scope.currentTip = $scope.tips[i];
 			$timeout(function() { $scope.changeTip(i+1)}, 10000);
 		} else {
@@ -155,7 +155,6 @@ app.controller("mainCtrl", function($scope, $http, $window, $timeout) {
 		}
 	}
 	$scope.currentTip = $scope.tips[0];
-	$timeout(function() { $scope.changeTip(1)}, 10000);
 });
 app.directive('selectOnClick', ['$window', function ($window) {
     return {

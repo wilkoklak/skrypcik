@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="pl" ng-app="mainApp" ng-controller="mainCtrl">
+<head>
+	<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css?r_=<?=mt_rand()?>">
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+	<title>Skrypcik - {{ title }}</title>
+</head>
+<body>
+{{ storage.list }}
+</body>
+<script>
+var app = angular.module("mainApp", []);
+app.controller("mainCtrl", function($scope) {
+	$scope.storage = window.localStorage;
+	$scope.list = ["a", "b", "b"];
+	$scope.storage.list = JSON.stringify($scope.list);
+});
+</script>
